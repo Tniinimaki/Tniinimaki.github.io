@@ -330,12 +330,12 @@ ul#nav li.current a { color: #F06000; }
 }
 
 .english {
-  	width: 99%;
+  	width: 98%;
   	-moz-animation: photoshop 2s ease;
   	-webkit-animation: photoshop 2s ease;
 }
 .finnish {
-  	width: 98%;
+  	width: 99%;
   	-moz-animation: illustrator 2s ease;
   	-webkit-animation: illustrator 2s ease;
 }
