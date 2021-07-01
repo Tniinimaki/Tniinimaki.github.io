@@ -1,2 +1,2 @@
-# tette.fi
+# Tniinimaki.github.io
 Tette.fi resume
