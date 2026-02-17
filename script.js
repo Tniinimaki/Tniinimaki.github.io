@@ -67,15 +67,52 @@
 
   const menuToggle = document.querySelector(".menu-toggle");
   const navList = byId("nav-list");
+  const navLinks = Array.from(navList.querySelectorAll("a"));
+
   menuToggle.addEventListener("click", () => {
     const isOpen = navList.classList.toggle("open");
     menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
   });
 
-  navList.querySelectorAll("a").forEach((link) => {
+  navLinks.forEach((link) => {
     link.addEventListener("click", () => {
       navList.classList.remove("open");
       menuToggle.setAttribute("aria-expanded", "false");
     });
   });
+
+  const sections = navLinks
+    .map((link) => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
+
+  const setActiveLink = (id) => {
+    navLinks.forEach((link) => {
+      const isActive = link.getAttribute("href") === `#${id}`;
+      link.classList.toggle("active", isActive);
+      if (isActive) {
+        link.setAttribute("aria-current", "true");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  };
+
+  if (sections.length > 0) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) {
+          setActiveLink(visible.target.id);
+        }
+      },
+      {
+        rootMargin: "-35% 0px -55% 0px",
+        threshold: [0.2, 0.4, 0.6]
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+  }
 })();
