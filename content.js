@@ -10,31 +10,31 @@ window.cvContent = {
     "Website rebuilds focused on buyer journeys, SEO, AEO, and conversion paths.",
     "Demand execution across email, lifecycle, Google Ads, and LinkedIn Ads.",
     "Sales-aligned account and contact discovery support, including Clay-based list building.",
-    "International growth work, including DACH focus and trade fairs as an account-based demand channel.",
-    "Languages: English (fluent), Finnish (native), Swedish (fluent)."
+    "International growth work.",
+    "Languages: English (fluent), Finnish (native), Swedish (native)."
   ],
   experience: [
     {
       role: "Head of Marketing",
       company: "Ouman Group / Ouman Oy (B2B hardware)",
-      context: "~2020 - Present (exact dates editable) | ~250 employees, ~€46M revenue",
+      context: "~Oct 2021 - Present",
       details: [
+        "Member of the management team",
         "Built the marketing function largely from scratch.",
         "HubSpot super admin; set up CRM, pipelines, properties, and reporting.",
         "Led website rebuild focused on buyer journeys, SEO, and AEO.",
-        "Built email marketing and lifecycle campaigns in HubSpot.",
-        "Ran Google Ads and LinkedIn campaigns (lead gen and awareness, small budgets).",
+        "Ran Google Ads and LinkedIn campaigns.",
         "Built integrations and workflows between HubSpot and internal PM software using Make.",
-        "Supported sales with account and contact discovery, including Clay.",
+        "Supported sales with account and contact discovery, using Clay.",
         "Worked in close collaboration with sales and management.",
         "Contributed to international growth work, including DACH focus.",
-        "Used trade fairs as a core account-based demand and sales channel."
+        "In charge of international trade-fairs."
       ]
     },
     {
       role: "CMO",
-      company: "KEINO / Wallasvaara Engage",
-      context: "June 2018 - Present (part-time / parallel role)",
+      company: "KEiNO / Wallasvaara Engage",
+      context: "June 2018 - 2021",
       details: [
         "Worked with everything from brand and websites to CRM and lead flows.",
         "Designed digital marketing campaigns.",
@@ -48,7 +48,7 @@ window.cvContent = {
       details: [
         "Part of the core team.",
         "Responsible for the Slush Shanghai mobile app.",
-        "Managed stage hosts and acted as main stage host.",
+        "Host of the main stage and manager of stage hosts.",
         "Worked on marketing, content, and volunteer coordination."
       ]
     },
@@ -93,11 +93,14 @@ window.cvContent = {
     "Design & Media: Adobe XD, Photoshop, Illustrator, Premiere Pro",
     "AI & Prototyping: LLMs, VS Code, React Native (prototyping)"
   ],
-  education: "Åbo Akademi University: MSc (Economics & Business Administration), June 2018. Major: International Marketing. Minor: Information Systems. Katedralskolan: High School Graduate, June 2010.",
+  education: [
+    "Åbo Akademi University: MSc (Economics & Business Administration), June 2018. Major: International Marketing. Minor: Information Systems.", 
+    "Katedralskolan: High School Graduate, June 2010."
+  ],
   contact: {
     cta: "Best way to reach me: email.",
-    email: "you@example.com",
-    linkedin: "https://www.linkedin.com/in/your-profile/",
-    location: "Finland"
+    email: "tette.niinimaki@gmail.com",
+    linkedin: "https://www.linkedin.com/in/tette-niinimaki/",
+    location: "Turku, Finland"
   }
 };
