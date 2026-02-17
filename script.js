@@ -15,7 +15,22 @@
   byId("hero-line").textContent = data.heroLine || "";
   byId("work-style").textContent = data.workStyle || "";
   byId("about-text").textContent = data.about;
-  byId("cv-link").setAttribute("href", data.cvPdfUrl);
+  const cvLink = byId("cv-link");
+  const cvNote = byId("cv-note");
+  const hasCvFile = typeof data.cvPdfUrl === "string" && data.cvPdfUrl.trim() !== "" && data.cvPdfUrl !== "#";
+  if (hasCvFile) {
+    cvLink.setAttribute("href", data.cvPdfUrl);
+    cvLink.removeAttribute("aria-disabled");
+    cvLink.removeAttribute("tabindex");
+    cvLink.classList.remove("is-disabled");
+    cvNote.hidden = true;
+  } else {
+    cvLink.setAttribute("href", "#");
+    cvLink.setAttribute("aria-disabled", "true");
+    cvLink.setAttribute("tabindex", "-1");
+    cvLink.classList.add("is-disabled");
+    cvNote.hidden = false;
+  }
 
   const experienceList = byId("experience-list");
   data.experience.forEach((entry) => {
@@ -50,11 +65,11 @@
     tools.appendChild(chip);
   });
 
-  const educationText = byId("education-text");
+  const educationList = byId("education-list");
   if (Array.isArray(data.education)) {
-    educationText.innerHTML = data.education.map((item) => `<span class="edu-item">${item}</span>`).join("");
+    renderList(educationList, data.education);
   } else {
-    educationText.textContent = data.education;
+    renderList(educationList, [data.education]);
   }
   byId("contact-cta").textContent = data.contact.cta;
 

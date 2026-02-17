@@ -32,11 +32,21 @@
 
   <main id="main" class="container">
     <section id="about" class="hero" aria-labelledby="headline">
-      <p id="hero-line" class="hero-line"></p>
-      <h1 id="headline"></h1>
-      <p id="work-style" class="work-style"></p>
-      <p id="about-text" class="lead"></p>
-      <a class="btn" id="cv-link" href="#" download>Download CV (PDF)</a>
+      <div class="hero-layout">
+        <figure class="hero-photo-wrap">
+          <img class="hero-photo" src="images/tette.jpg" alt="Portrait of Tette Niinimäki">
+        </figure>
+        <div class="hero-copy">
+          <p id="hero-line" class="hero-line"></p>
+          <h1 id="headline"></h1>
+          <p id="work-style" class="work-style"></p>
+          <p id="about-text" class="lead"></p>
+          <div class="cv-cta">
+            <a class="btn is-disabled" id="cv-link" href="#" aria-disabled="true" tabindex="-1">Download CV (PDF)</a>
+            <p class="coming-soon-note" id="cv-note">Coming soon</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="experience" aria-labelledby="experience-title">
@@ -61,7 +71,7 @@
 
     <section id="education" aria-labelledby="education-title">
       <h2 id="education-title">Education</h2>
-      <p id="education-text"></p>
+      <ul id="education-list" class="bullet-list"></ul>
     </section>
 
     <section id="contact" aria-labelledby="contact-title">
