@@ -12,6 +12,8 @@
   };
 
   byId("headline").textContent = data.headline;
+  byId("hero-line").textContent = data.heroLine || "";
+  byId("work-style").textContent = data.workStyle || "";
   byId("about-text").textContent = data.about;
   byId("cv-link").setAttribute("href", data.cvPdfUrl);
 

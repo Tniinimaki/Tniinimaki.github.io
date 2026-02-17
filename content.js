@@ -1,5 +1,7 @@
 window.cvContent = {
-  headline: "B2B Demand & ABM Marketer (HubSpot/RevOps-adjacent)",
+  headline: "Senior B2B marketer building systems, not just campaigns.",
+  heroLine: "Part marketing Jedi, part builder of practical systems.",
+  workStyle: "Curious, hands-on, and pragmatic in the messy middle.",
   about: "Finland-based senior B2B marketer. Built marketing from scratch in enterprise contexts with long sales cycles and €100k+ ACV. Sales-aligned. HubSpot super admin. AI-first experimentation.",
   cvPdfUrl: "#",
   highlights: [
