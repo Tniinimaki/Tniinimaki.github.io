@@ -1,11 +1,11 @@
 :root {
-  --bg: #f6f6f4;
-  --surface: #ffffff;
-  --text: #18181b;
-  --muted: #4b5563;
-  --line: #e5e7eb;
-  --accent: #0f766e;
-  --accent-soft: #ecfdf5;
+  --bg: #050814;
+  --surface: rgba(8, 14, 30, 0.65);
+  --text: #e8f1ff;
+  --muted: #b4c6dd;
+  --line: rgba(148, 173, 198, 0.28);
+  --accent: #77ffd4;
+  --accent-soft: rgba(119, 255, 212, 0.13);
   --max: 1040px;
   --content: 940px;
   --radius: 10px;
@@ -25,6 +25,7 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   font-family: "Manrope", "Segoe UI", -apple-system, sans-serif;
   color: var(--text);
@@ -32,6 +33,38 @@ body {
   line-height: 1.72;
   font-size: 16px;
   text-rendering: optimizeLegibility;
+  min-height: 100vh;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+body::before {
+  z-index: -2;
+  background:
+    radial-gradient(55% 35% at 22% 14%, rgba(79, 238, 170, 0.34), transparent 70%),
+    radial-gradient(60% 32% at 82% 12%, rgba(70, 218, 240, 0.26), transparent 72%),
+    radial-gradient(64% 40% at 60% 40%, rgba(95, 255, 203, 0.15), transparent 76%),
+    linear-gradient(180deg, #04060f 0%, #051022 46%, #071125 100%);
+  filter: saturate(112%);
+}
+
+body::after {
+  z-index: -1;
+  background:
+    radial-gradient(1px 1px at 14% 18%, rgba(226, 240, 255, 0.55), transparent),
+    radial-gradient(1px 1px at 32% 8%, rgba(226, 240, 255, 0.42), transparent),
+    radial-gradient(1.2px 1.2px at 58% 22%, rgba(226, 240, 255, 0.48), transparent),
+    radial-gradient(1.1px 1.1px at 76% 14%, rgba(226, 240, 255, 0.42), transparent),
+    radial-gradient(1px 1px at 88% 30%, rgba(226, 240, 255, 0.3), transparent),
+    linear-gradient(to bottom, rgba(2, 7, 15, 0.12), rgba(2, 7, 15, 0.46));
+  background-repeat: repeat;
+  background-size: 240px 240px, 260px 260px, 280px 280px, 320px 320px, 360px 360px, 100% 100%;
 }
 
 .skip-link {
@@ -42,8 +75,8 @@ body {
 .skip-link:focus {
   left: var(--space-2);
   top: var(--space-2);
-  background: var(--text);
-  color: #fff;
+  background: #eef7ff;
+  color: #031422;
   padding: var(--space-1) 12px;
   border-radius: 8px;
 }
@@ -52,7 +85,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: color-mix(in srgb, var(--bg) 92%, #ffffff 8%);
+  background: rgba(4, 11, 24, 0.78);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(8px);
 }
@@ -99,7 +132,7 @@ body {
 .top-nav a:hover,
 .top-nav a:focus-visible {
   color: var(--accent);
-  border-bottom-color: color-mix(in srgb, var(--accent) 50%, transparent);
+  border-bottom-color: color-mix(in srgb, var(--accent) 58%, transparent);
 }
 
 .top-nav a.active,
@@ -111,7 +144,7 @@ body {
 .menu-toggle {
   display: none;
   border: 1px solid var(--line);
-  background: var(--surface);
+  background: rgba(5, 16, 31, 0.9);
   color: var(--text);
   border-radius: 8px;
   padding: 6px 11px;
@@ -157,7 +190,7 @@ h1 {
 
 .work-style {
   margin: var(--space-3) 0 0;
-  color: var(--text);
+  color: #d8e7f8;
   font-size: 1.07rem;
   line-height: 1.66;
   max-width: 66ch;
@@ -180,10 +213,18 @@ h2 {
   max-width: 72ch;
 }
 
+.edu-item {
+  display: block;
+}
+
+.edu-item + .edu-item {
+  margin-top: var(--space-2);
+}
+
 .btn {
   display: inline-block;
   text-decoration: none;
-  color: #ffffff;
+  color: #06231f;
   background: var(--accent);
   padding: 11px 14px;
   border-radius: var(--radius);
@@ -196,7 +237,7 @@ h2 {
 
 .btn:hover,
 .btn:focus-visible {
-  background: #0b5f59;
+  background: #94ffdd;
   transform: translateY(-1px);
 }
 
@@ -215,7 +256,7 @@ h2 {
 
 .card {
   border: 0;
-  border-left: 2px solid color-mix(in srgb, var(--accent) 26%, var(--line));
+  border-left: 2px solid color-mix(in srgb, var(--accent) 35%, var(--line));
   border-radius: 0;
   background: transparent;
   padding: 0 0 0 var(--space-3);
@@ -251,8 +292,8 @@ h2 {
 
 .chip {
   background: var(--accent-soft);
-  border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--line));
-  color: #0b4f4a;
+  border: 1px solid color-mix(in srgb, var(--accent) 26%, var(--line));
+  color: #cbfff0;
   border-radius: 999px;
   padding: 5px 10px;
   font-weight: 600;
@@ -274,7 +315,7 @@ h2 {
 }
 
 .contact-list a:hover {
-  color: #0b5f59;
+  color: #adffe6;
 }
 
 #about,
@@ -300,7 +341,7 @@ h2 {
     position: absolute;
     right: var(--space-2);
     top: 52px;
-    background: var(--surface);
+    background: rgba(8, 16, 34, 0.95);
     border: 1px solid var(--line);
     border-radius: var(--radius);
     padding: 12px;

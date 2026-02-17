@@ -50,7 +50,12 @@
     tools.appendChild(chip);
   });
 
-  byId("education-text").textContent = data.education;
+  const educationText = byId("education-text");
+  if (Array.isArray(data.education)) {
+    educationText.innerHTML = data.education.map((item) => `<span class="edu-item">${item}</span>`).join("");
+  } else {
+    educationText.textContent = data.education;
+  }
   byId("contact-cta").textContent = data.contact.cta;
 
   const contactList = byId("contact-list");
