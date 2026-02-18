@@ -90,15 +90,15 @@ window.cvContent = {
     "Marketing & Ads: Google Ads, LinkedIn Ads, Email marketing",
     "Web & CMS: HubSpot CMS, Webflow, WordPress, Squarespace",
     "Data & Analytics: Google Analytics",
-    "Design & Media: Adobe XD, Photoshop, Illustrator, Premiere Pro",
-    "AI & Prototyping: LLMs, VS Code, React Native (prototyping)"
+    "Design & Media: Adobe InDesign, XD, Photoshop, Illustrator, Premiere Pro",
+    "AI & Prototyping: LLMs, VS Code, GitHub Copilot, Codex, Clay, Scribe, MidJourney"
   ],
   education: [
     "Åbo Akademi University: MSc (Economics & Business Administration), June 2018. Major: International Marketing. Minor: Information Systems.", 
     "Katedralskolan: High School Graduate, June 2010."
   ],
   contact: {
-    cta: "Best way to reach me: email.",
+    cta: "Best way to reach me:",
     email: "tette.niinimaki@gmail.com",
     linkedin: "https://www.linkedin.com/in/tette-niinimaki/",
     location: "Turku, Finland"
